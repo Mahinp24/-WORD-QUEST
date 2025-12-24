@@ -4,3 +4,8 @@ import random
 word_bank = ['stars', 'cat', 'chicago', 'tiktok', 'Florida','animals',
 'love', 'black','blue']
 word = random.choice(word_bank)
+# --- Game Setup ---
+guessedWord = ['_'] * len(word)
+attempts = 10
+guessed_letters = []
+score = 0
