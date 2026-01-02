@@ -1,9 +1,10 @@
 import random
 
 # --- Create the Word Bank ---
-word_bank = ['Stars','Cat','Chicago','Tiktok','Florida','Animals',
-'Love','Black','Blue','Mowgil','Phone','Apple','New York','Batman',
-'Monday','Code','Family','Friends','
+word_bank = ['stars', 'cat', 'chicago', 'tiktok', 'florida', 
+'animals', 'love', 'black', 'blue', 'mowgil', 'phone', 
+'apple', 'new-york', 'batman', 'monday', 'code',
+'family', 'friends']
 word = random.choice(word_bank)
 # --- Game Setup ---
 guessedWord = ['_'] * len(word)
