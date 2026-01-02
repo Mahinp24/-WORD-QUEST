@@ -3,7 +3,7 @@ import random
 # --- Create the Word Bank ---
 word_bank = ['Stars','Cat','Chicago','Tiktok','Florida','Animals',
 'Love','Black','Blue','Mowgil','Phone','Apple','New York','Batman',
-'Monday','Code', ]
+'Monday','Code','Family','Friends','
 word = random.choice(word_bank)
 # --- Game Setup ---
 guessedWord = ['_'] * len(word)
