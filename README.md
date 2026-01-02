@@ -25,13 +25,13 @@ guess = input('Enter a letter or the full word: ').lower()
 
  # --- Full word guess ---
 if len(guess) == len(word) and guess.isalpha():
-     if guess == word:
-        score += 50   # Big reward for full word guess
-        print('\n Congratulations!! You guessed the word:', word)
-        print('🏆 Final Score:', score)
-        break
-        else:
-        attempts -= 1
-        score -= 10
-        print('❌ Wrong word guess! Attempts left:', attempts)
-        continue
+if guess == word:
+    score += 50   # Big reward for full word guess
+    print('\n Congratulations!! You guessed the word:', word)
+    print('🏆 Final Score:', score)
+    break
+    else:
+    attempts -= 1
+    score -= 10
+    print('❌ Wrong word guess! Attempts left:', attempts)
+    continue
