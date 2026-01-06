@@ -5,9 +5,7 @@ word_bank = [
 'stars', 'cat', 'chicago', 'tiktok', 'florida',
 'animals', 'love', 'black', 'blue', 'mowgil',
 'phone', 'apple', 'new-york', 'batman', 'monday',
-'code', 'family', 'friends'
-]
-
+'code', 'family', 'friends', ']
 word = random.choice(word_bank)
 
 # --- Game Setup ---
@@ -26,3 +24,12 @@ print("===================================")
 print("\n📚 Possible Words:")
 print(", ".join(word_bank))
 print("===================================\n")
+
+# --- Game Loop ---
+while attempts > 0:
+    print('\nCurrent word:', ' '.join(guessedWord))
+    print('Guessed letters:', ' '.join(guessed_letters))
+    print('Score:', score)
+guess = input('Enter a letter or the full word: ').lower()
+
+# --- Full word guess ---
