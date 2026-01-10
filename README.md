@@ -45,3 +45,11 @@ if len(guess) == len(word) and guess.isalpha():
             continue
 
  # --- Single letter guess ---
+ if len(guess) != 1 or not guess.isalpha():
+    print("⚠️ Please enter a single letter or the full word.")
+    continue
+
+ if guess in guessed_letters:
+    print("⚠️ You already guessed that letter.")
+    continue
+    
