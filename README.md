@@ -1,13 +1,11 @@
 import random
-
 # --- Create the Word Bank ---
 word_bank = [
     'stars', 'cat', 'chicago', 'tiktok', 'florida',
     'animals', 'love', 'black', 'blue', 'mowgil',
     'phone', 'apple', 'new-york', 
     'batman', 'monday', 'code', 'family', 
-    'friends']
-    
+    'friends', 'computer', ']
 # --- Game Setup ---
 guessedWord = ['_'] * len(word)
 attempts = 10
@@ -18,19 +16,16 @@ print("🕹️ WORD QUEST")
 print("Guess letters or the full word")
 print("You have 10 attempts — choose wisely!")
 print("===================================")
-
 # NEW OUTPUT: Show wording to player
 print("\n📚 Possible Words:")
 print(", ".join(word_bank))
 print("===================================\n")
-
 # --- Game Loop ---
 while attempts > 0:
     print('\nCurrent word:', ' '.join(guessedWord))
     print('Guessed letters:', ' '.join(guessed_letters))
     print('Score:', score)
 guess = input('Enter a letter or the full word: ').lower()
-
 # --- Full word guess ---
 if len(guess) == len(word) and guess.isalpha():
         if guess == word:
@@ -43,7 +38,6 @@ if len(guess) == len(word) and guess.isalpha():
             score -= 10
             print('❌ Wrong word guess! Attempts left:', attempts)
             continue
-
  # --- Single letter guess ---
  if len(guess) != 1 or not guess.isalpha():
     print("⚠️ Please enter a single letter or the full word.")
@@ -52,4 +46,15 @@ if len(guess) == len(word) and guess.isalpha():
  if guess in guessed_letters:
     print("⚠️ You already guessed that letter.")
     continue
-    
+ guessed_letters.append(guess)
+
+ if guess in word:
+        for i in range(len(word)):
+            if word[i] == guess:
+                guessedWord[i] = guess
+        score += 5
+        print('✅ Great guess! +5 points')
+    else:
+        attempts -= 1
+        score -= 5
+        print('❌ Wrong letter! Attempts left:', attempts)
