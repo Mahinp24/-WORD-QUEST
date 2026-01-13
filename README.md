@@ -47,14 +47,12 @@ if len(guess) == len(word) and guess.isalpha():
     print("⚠️ You already guessed that letter.")
     continue
  guessed_letters.append(guess)
-
- if guess in word:
-        for i in range(len(word)):
-            if word[i] == guess:
-                guessedWord[i] = guess
-        score += 5
-        print('✅ Great guess! +5 points')
-    else:
-        attempts -= 1
-        score -= 5
-        print('❌ Wrong letter! Attempts left:', attempts)
+if guess in word:
+    for i in range (len(word)):
+        if word[i] == guess
+            guessedWord[i] = guess
+    score+= 5
+    print('✅ Great guess! +5 points')
+else:
+    attempts -= 1
+    score -=5 
