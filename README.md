@@ -60,3 +60,9 @@ if guess in word:
 else:
     attempts -= 1
     score -=5 
+    # --- Win condition ---
+    if '_' not in guessedWord:
+        score += 20
+        print('\n🎉 Congratulations!! You guessed the word:', word)
+        print('🏆 Final Score:', score)
+        break
